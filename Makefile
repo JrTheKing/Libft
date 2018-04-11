@@ -6,7 +6,7 @@
 #    By: gbenson- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/05 18:52:27 by gbenson-          #+#    #+#              #
-#    Updated: 2018/03/19 23:11:27 by gbenson-         ###   ########.fr        #
+#    Updated: 2018/04/02 15:56:05 by gbenson-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ all: $(NAME)
 
 $(NAME): $(BINS)
 	@ ar	rc	$(NAME)	$(BINS)
-	@ nm -s $(NAME)
+	@ ranlib	$(NAME)
 
 %.o: %.c $(HEADER)
 	@ gcc	$(FLAGS)	 -o	$@ $<
